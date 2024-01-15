@@ -48,7 +48,7 @@ exports.userLogin = (req, res, next) => {
                 let token = jwt.sign({
                     email: user[0].email,
                     userId: user[0]._id
-                }, "secret",
+                }, "ASecretKey",
                 {
                     expiresIn: "2h"
                 });
